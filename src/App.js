@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from '../src/components/Navbar';
+import HeroSection from '../src/components/HeroSection';
+import About from '../src/components/About';
+import Skills from '../src/components/Skills';
+import Projects from '../src/components/Projects';
+import ContactMe from '../src/components/ContactMe';
+import Footer from '../src/components/Footer';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='max-w-[1130px] mx-auto' >
+      <Navbar/>
+      <HeroSection/>
+      <About/>
+      <Skills/>
+      <Projects/>
+      <ContactMe/>
+      <Footer/>
+      <Toaster position="bottom-right"
+      reverseOrder={false}/>
     </div>
   );
 }
